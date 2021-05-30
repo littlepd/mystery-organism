@@ -31,7 +31,7 @@ function pAequorFactory(number, baseArray) {
           match += 1;
         }
       }
-      const percentMatch = match / this.dna.length;
+      const percentMatch = (match / this.dna.length) * 100;
       console.log(`specimen #${this.specimenNum} and specimen #${pAequor.specimenNum} have ${percentMatch}% DNA in common.`);
     },
     willLikelySurvive() {
@@ -41,8 +41,8 @@ function pAequorFactory(number, baseArray) {
           CGCount += 1;
         }
       }
-      const percentCG = CGCount / this.dna.length;
-      if (percentCG >= 0.60) {
+      const percentCG = (CGCount / this.dna.length) * 100;
+      if (percentCG >= 60.0) {
         return true;
       }
       return false;
