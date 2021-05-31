@@ -20,7 +20,7 @@ function pAequorFactory(number, baseArray) {
     mutate() {
       const firstBase = this.dna[0];
       do {
-        const randBase = returnRandBase();
+        let randBase = returnRandBase();
       } while (firstBase === randBase);
       return randBase;
     },
